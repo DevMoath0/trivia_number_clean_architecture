@@ -80,30 +80,6 @@
       "languageVersion": "2.18"
     },
     {
-      "name": "connectivity",
-      "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/connectivity-3.0.6",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "connectivity_for_web",
-      "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/connectivity_for_web-0.4.0+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "connectivity_macos",
-      "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/connectivity_macos-0.2.1+2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "connectivity_platform_interface",
-      "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/connectivity_platform_interface-2.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "convert",
       "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.1",
       "packageUri": "lib/",
@@ -130,6 +106,12 @@
     {
       "name": "dartz",
       "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/dartz-0.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "data_connection_checker_nulls",
+      "rootUri": "file:///C:/Users/iim3a/AppData/Local/Pub/Cache/hosted/pub.dev/data_connection_checker_nulls-0.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -476,7 +458,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-03-20T11:27:10.695541Z",
+  "generated": "2024-03-21T10:40:52.243526Z",
   "generator": "pub",
   "generatorVersion": "3.3.1"
 }
