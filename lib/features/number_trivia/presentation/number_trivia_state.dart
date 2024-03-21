@@ -1,0 +1,44 @@
+part of 'number_trivia_bloc.dart';
+
+sealed class NumberTriviaState extends Equatable {
+  const NumberTriviaState();
+}
+
+final class Empty extends NumberTriviaState {
+  @override
+  List<Object> get props => [];
+}
+
+class Loading extends NumberTriviaState {
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
+}
+
+class Loaded extends NumberTriviaState {
+  final NumberTrivia trivia;
+
+  Loaded({required this.trivia});
+
+  @override
+  // TODO: implement props
+  List<Object?> get props {
+    return [
+      trivia,
+    ];
+  }
+}
+
+class Error extends NumberTriviaState {
+  final String error;
+
+  Error({required this.error});
+
+  @override
+  // TODO: implement props
+  List<Object?> get props {
+    return [
+      error,
+    ];
+  }
+}
