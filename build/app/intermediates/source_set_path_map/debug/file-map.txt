@@ -1,0 +1,14 @@
+com.example.trivia_clean_architicture.app-core-1.6.0-0 C:\Users\iim3a\.gradle\caches\transforms-3\200a576eda084a09550ebc2ea22cb4a5\transformed\core-1.6.0\res
+com.example.trivia_clean_architicture.app-jetified-annotation-experimental-1.1.0-1 C:\Users\iim3a\.gradle\caches\transforms-3\25d10a17dc8ad1a5b3e7a462dcbe183e\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.trivia_clean_architicture.app-jetified-window-java-1.0.0-beta04-2 C:\Users\iim3a\.gradle\caches\transforms-3\4b3a5ba95f21a06952d568097b3e5266\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.trivia_clean_architicture.app-jetified-window-1.0.0-beta04-3 C:\Users\iim3a\.gradle\caches\transforms-3\4b5a18471ec833030c46d3531975dc92\transformed\jetified-window-1.0.0-beta04\res
+com.example.trivia_clean_architicture.app-debug-4 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\debug\res
+com.example.trivia_clean_architicture.app-main-5 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\main\res
+com.example.trivia_clean_architicture.app-pngs-6 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\app\generated\res\pngs\debug
+com.example.trivia_clean_architicture.app-resValues-7 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\app\generated\res\resValues\debug
+com.example.trivia_clean_architicture.app-rs-8 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\app\generated\res\rs\debug
+com.example.trivia_clean_architicture.app-mergeDebugResources-9 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.trivia_clean_architicture.app-mergeDebugResources-10 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.trivia_clean_architicture.app-merged_res-11 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\app\intermediates\merged_res\debug
+com.example.trivia_clean_architicture.app-packaged_res-12 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\connectivity\intermediates\packaged_res\debug
+com.example.trivia_clean_architicture.app-packaged_res-13 C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\shared_preferences_android\intermediates\packaged_res\debug

@@ -1,0 +1,1 @@
+ C:\\Users\\iim3a\\AndroidStudioProjects\\trivia_clean_architicture\\.dart_tool\\flutter_build\\9d0a4a4a85ea3a80859aae271bf19d12\\native_assets.yaml: 
