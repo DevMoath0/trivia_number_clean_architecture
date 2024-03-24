@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+
 import 'package:equatable/equatable.dart';
 
 import '../../../core/error/failures.dart';
@@ -6,9 +7,9 @@ import '../../../core/util/input_converter.dart';
 import '../domain/entities/number_trivia.dart';
 import '../domain/usecases/get_concrete_number_trivia.dart';
 import '../domain/usecases/get_random_number_trivia.dart';
-import 'number_trivia_event.dart';
+//import 'number_trivia_event.dart';
 
-//part 'number_trivia_event.dart';
+part 'number_trivia_event.dart';
 part 'number_trivia_state.dart';
 
 const String serverFailureMessage = 'Server Failure';
@@ -26,33 +27,54 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     required this.getRandomNumberTrivia,
     required this.inputConverter,
   }) : super(Empty()) {
-    on<NumberTriviaEvent>((event, emit) async {
-      if (event is GetTriviaForConcreteNumber) {
-        final inputEither =
-            inputConverter.stringToUnsignedInteger(event.numberString);
+    on<GetTriviaForConcreteNumber>(_getConcreteNumberTrivialHandler);
+    on<GetTrivialForRandomNumber>(_getRandomNumberTrivialHandler);
+  }
 
-        inputEither.fold(
-            // If it was a Failure it will yield an Error
-            (l) => (failure) async* {
-                  yield Error(error: invalidInput);
-                },
-            (r) => (integer) async* {
-                  // This is a [Higher order function] which takes a function as an argument
-                  //
-                  // or returns a function
-                  yield Loading();
+  // For the ConcreteNumberTrivia
+  Future<void> _getConcreteNumberTrivialHandler(
+    GetTriviaForConcreteNumber event,
+    Emitter<NumberTriviaState> emitter,
+  ) async {
+    final result =
+        inputConverter.stringToUnsignedInteger.call(event.numberString);
+    result.fold(
+      (l) => (failure) {
+        emit(Error(message: invalidInput));
+      },
+      (r) => (number) async {
+        emit(Loading());
+        final failureOrTrivia =
+            await getConcreteNumberTrivia(Params(number: number));
 
-                  final failureOrTrivia =
-                      await getConcreteNumberTrivia(Params(number: integer));
+        failureOrTrivia.fold(
+          (l) => (failure) {
+            emit(Error(message: _mapFailureToMessage(l)));
+          },
+          (r) => (numberTrivia) {
+            emit(Loaded(trivia: numberTrivia));
+          },
+        );
+      },
+    );
+  }
 
-                  yield failureOrTrivia.fold(
-                      (l) => Error(error: _mapFailureToMessage(l)),
-                      (r) => (trivia) {
-                            return Loaded(trivia: trivia);
-                          });
-                });
-      }
-    });
+  // For the RandomNumberTrivia
+  Future<void> _getRandomNumberTrivialHandler(
+    GetTrivialForRandomNumber event,
+    Emitter<NumberTriviaState> emit,
+  ) async {
+    emit(Loading());
+
+    final failureOrTrivia = await getRandomNumberTrivia(NoParams());
+    failureOrTrivia.fold(
+      (l) => (failure) {
+        emit(Error(message: _mapFailureToMessage(l)));
+      },
+      (r) => (numberTrivia) {
+        emit(Loaded(trivia: numberTrivia));
+      },
+    );
   }
 
   // Instead of using ternary operator to decide which failure message to provide.

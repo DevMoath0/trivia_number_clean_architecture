@@ -11,14 +11,13 @@ final class Empty extends NumberTriviaState {
 
 class Loading extends NumberTriviaState {
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object> get props => throw UnimplementedError('Loading');
 }
 
 class Loaded extends NumberTriviaState {
   final NumberTrivia trivia;
 
-  Loaded({required this.trivia});
+  const Loaded({required this.trivia});
 
   @override
   // TODO: implement props
@@ -30,15 +29,15 @@ class Loaded extends NumberTriviaState {
 }
 
 class Error extends NumberTriviaState {
-  final String error;
+  final String message;
 
-  Error({required this.error});
+  Error({required this.message});
 
   @override
   // TODO: implement props
   List<Object?> get props {
     return [
-      error,
+      message,
     ];
   }
 }

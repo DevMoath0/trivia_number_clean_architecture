@@ -36,7 +36,7 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   // Getting the response from the api
   Future<NumberTriviaModel> _getTriviaFromUrl(String url) async {
     final response = await client.get(
-      url as Uri,
+      Uri.parse(url),
       headers: {
         "Content-type": "application/json",
       },
@@ -44,6 +44,7 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
 
     if (response.statusCode == 200) {
       // Since the response is a Map<String, dynamic> I converted it to a json form.
+      print(response.body);
       return NumberTriviaModel.fromJson(jsonDecode(response.body));
     } else {
       throw ServerException();

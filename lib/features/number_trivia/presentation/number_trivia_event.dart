@@ -1,6 +1,6 @@
-//part of 'number_trivia_bloc.dart';
+part of 'number_trivia_bloc.dart';
 
-import 'package:equatable/equatable.dart';
+//import 'package:equatable/equatable.dart';
 
 sealed class NumberTriviaEvent extends Equatable {
   const NumberTriviaEvent();
