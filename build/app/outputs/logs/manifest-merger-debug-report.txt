@@ -18,7 +18,6 @@ INJECTED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\and
 INJECTED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\main\AndroidManifest.xml:1:1-44:12
 MERGED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\main\AndroidManifest.xml:1:1-44:12
 MERGED from [:shared_preferences_android] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:connectivity] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\connectivity\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\iim3a\.gradle\caches\transforms-3\4b3a5ba95f21a06952d568097b3e5266\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\iim3a\.gradle\caches\transforms-3\4b5a18471ec833030c46d3531975dc92\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\iim3a\.gradle\caches\transforms-3\e138ba1200a5e201071c72b9cf6454cd\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -71,8 +70,6 @@ INJECTED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\and
 INJECTED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\main\AndroidManifest.xml
 MERGED from [:shared_preferences_android] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:shared_preferences_android] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:connectivity] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\connectivity\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:connectivity] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\connectivity\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\iim3a\.gradle\caches\transforms-3\4b3a5ba95f21a06952d568097b3e5266\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\iim3a\.gradle\caches\transforms-3\4b3a5ba95f21a06952d568097b3e5266\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\iim3a\.gradle\caches\transforms-3\4b5a18471ec833030c46d3531975dc92\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
@@ -119,10 +116,6 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\android\app\src\debug\AndroidManifest.xml:6:22-64
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:connectivity] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\connectivity\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
-	android:name
-		ADDED from [:connectivity] C:\Users\iim3a\AndroidStudioProjects\trivia_clean_architicture\build\connectivity\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-76
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\iim3a\.gradle\caches\transforms-3\4b5a18471ec833030c46d3531975dc92\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required
