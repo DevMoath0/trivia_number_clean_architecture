@@ -27,32 +27,33 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     required this.getRandomNumberTrivia,
     required this.inputConverter,
   }) : super(Empty()) {
-    on<GetTriviaForConcreteNumber>(_getConcreteNumberTrivialHandler);
-    on<GetTrivialForRandomNumber>(_getRandomNumberTrivialHandler);
+    on<GetTriviaForConcreteNumber>(_getConcreteNumberTriviaHandler);
+    on<GetTriviaForRandomNumber>(_getRandomNumberTriviaHandler);
   }
 
   // For the ConcreteNumberTrivia
-  Future<void> _getConcreteNumberTrivialHandler(
+  Future<void> _getConcreteNumberTriviaHandler(
     GetTriviaForConcreteNumber event,
     Emitter<NumberTriviaState> emitter,
   ) async {
     final result =
         inputConverter.stringToUnsignedInteger.call(event.numberString);
+
     result.fold(
-      (l) => (failure) {
+      (failure) {
         emit(Error(message: invalidInput));
       },
-      (r) => (number) async {
+      (number) async {
         emit(Loading());
         final failureOrTrivia =
             await getConcreteNumberTrivia(Params(number: number));
 
         failureOrTrivia.fold(
-          (l) => (failure) {
-            emit(Error(message: _mapFailureToMessage(l)));
+          (failure) {
+            emit(Error(message: _mapFailureToMessage(failure)));
           },
-          (r) => (numberTrivia) {
-            emit(Loaded(trivia: numberTrivia));
+          (number) {
+            emit(Loaded(trivia: number));
           },
         );
       },
@@ -60,19 +61,19 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   }
 
   // For the RandomNumberTrivia
-  Future<void> _getRandomNumberTrivialHandler(
-    GetTrivialForRandomNumber event,
+  Future<void> _getRandomNumberTriviaHandler(
+    GetTriviaForRandomNumber event,
     Emitter<NumberTriviaState> emit,
   ) async {
     emit(Loading());
 
     final failureOrTrivia = await getRandomNumberTrivia(NoParams());
     failureOrTrivia.fold(
-      (l) => (failure) {
-        emit(Error(message: _mapFailureToMessage(l)));
+      (failure) {
+        emit(Error(message: _mapFailureToMessage(failure)));
       },
-      (r) => (numberTrivia) {
-        emit(Loaded(trivia: numberTrivia));
+      (number) {
+        emit(Loaded(trivia: number));
       },
     );
   }

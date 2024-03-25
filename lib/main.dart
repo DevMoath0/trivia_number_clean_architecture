@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Number Trivia',
       home: NumberTriviaScreen(),
       theme: ThemeData(
-        primaryColor: Colors.pinkAccent.shade700,
+        primaryColor: Colors.deepPurple.shade700,
       ),
     );
   }
